@@ -3,6 +3,7 @@ import "./App.css";
 
 import AddTodo from "../containers/addTodo";
 import VisibleTodoList from "../containers/VisibleTodoList";
+import ListButton from "./ListButtons";
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
       <div className="App">
         <AddTodo />
         <VisibleTodoList />
+        <ListButton />
         <p>Sup Pup</p>
       </div>
     );

@@ -1,22 +1,20 @@
-import React from "react";
-
-const todos = (initialState = [], action) => {
+const todos = (state = [], action) => {
   switch (action.type) {
     case "ADD_TODO":
       return [
-        ...initialState,
+        ...state,
         {
           id: action.id,
           text: action.text,
-          completed: action.completed
+          completed: false
         }
       ];
     case "TOGGLE_TODO":
-      return initialState.map(item =>
-        item.id === action.id ? { ...item, completed: !item.completed } : item
+      return state.map(todo =>
+        todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
       );
     default:
-      return initialState;
+      return state;
   }
 };
 
