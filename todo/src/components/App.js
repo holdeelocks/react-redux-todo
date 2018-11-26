@@ -9,10 +9,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>React Redux TodoList</h1>
         <AddTodo />
         <VisibleTodoList />
         <ListButton />
-        <p>Sup Pup</p>
       </div>
     );
   }
